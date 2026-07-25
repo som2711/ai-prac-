@@ -1,0 +1,177 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "id": "4dfd8bce",
+   "metadata": {},
+   "source": [
+    "Pratical 4"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 17,
+   "id": "591721cc",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Probability that person actually has disease:\n",
+      "16.67 %\n",
+      "Som\n"
+     ]
+    }
+   ],
+   "source": [
+    "P_D = 0.01\n",
+    "P_Pos_D = 0.99\n",
+    "P_Pos_NotD = 0.05\n",
+    "P_NotD = 1 - P_D\n",
+    "\n",
+    "P_D_Pos = (P_Pos_D * P_D) / ((P_Pos_D * P_D) + (P_Pos_NotD * P_NotD))\n",
+    "\n",
+    "print(\"Probability that person actually has disease:\")\n",
+    "print(round(P_D_Pos * 100, 2), \"%\")\n",
+    "print(\"Som\")"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "1963013c",
+   "metadata": {},
+   "source": [
+    "Task"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "58fac937",
+   "metadata": {},
+   "source": [
+    "Q.1 In a college:\n",
+    "20% of students know Python.\n",
+    "80% of students know Java.\n",
+    "90% of Python students get placed.\n",
+    "40% of Java students get placed.\n",
+    "A randomly selected student is placed.\n",
+    "Find:\n",
+    "Probability that the student knows Python.\n",
+    "Probability that the student knows Java.\n",
+    "Probability that a placed student knows Python."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 16,
+   "id": "1924eed4",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Probability that the student knows Python:\n",
+      "0.2\n",
+      "Probability that the student knows Java:\n",
+      "0.8\n",
+      "Probability that a placed student knows Python:\n",
+      "0.36\n",
+      "Percentage: 36.0 %\n",
+      "Som\n"
+     ]
+    }
+   ],
+   "source": [
+    "P_Python = 0.20\n",
+    "P_Java = 0.80\n",
+    "\n",
+    "P_Placed_Python = 0.90\n",
+    "P_Placed_Java = 0.40\n",
+    "\n",
+    "P_Placed = (P_Placed_Python * P_Python) + (P_Placed_Java * P_Java)\n",
+    "\n",
+    "P_Python_Placed = (P_Placed_Python * P_Python) / P_Placed\n",
+    "\n",
+    "print(\"Probability that the student knows Python:\")\n",
+    "print(P_Python)\n",
+    "\n",
+    "print(\"Probability that the student knows Java:\")\n",
+    "print(P_Java)\n",
+    "\n",
+    "print(\"Probability that a placed student knows Python:\")\n",
+    "print(round(P_Python_Placed, 4))\n",
+    "print(\"Percentage:\", round(P_Python_Placed * 100, 2), \"%\")\n",
+    "print(\"Som\")"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "3f8e6075",
+   "metadata": {},
+   "source": [
+    "Q.2 In a city:\n",
+    "85% of taxis are Green.\n",
+    "15% are Blue.\n",
+    "A witness correctly identifies the taxi color 80% of the time.\n",
+    "A witness claims the taxi involved in an accident was Blue. What is the probability that the taxi was actually Blue?"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 15,
+   "id": "4e0798ec",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Probability that the taxi was actually Blue:\n",
+      "0.4138\n",
+      "Percentage: 41.38 %\n",
+      "Som\n"
+     ]
+    }
+   ],
+   "source": [
+    "P_Blue = 0.15\n",
+    "P_Green = 0.85\n",
+    "\n",
+    "P_Witness_Blue_Blue = 0.80\n",
+    "P_Witness_Blue_Green = 0.20\n",
+    "\n",
+    "P_Witness_Blue = (P_Witness_Blue_Blue * P_Blue) + (P_Witness_Blue_Green * P_Green)\n",
+    "\n",
+    "P_Blue_Witness = (P_Witness_Blue_Blue * P_Blue) / P_Witness_Blue\n",
+    "\n",
+    "print(\"Probability that the taxi was actually Blue:\")\n",
+    "print(round(P_Blue_Witness, 4))\n",
+    "print(\"Percentage:\", round(P_Blue_Witness * 100, 2), \"%\")\n",
+    "print(\"Som\")"
+   ]
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.14.6"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
